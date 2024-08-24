@@ -1,0 +1,45 @@
+{
+	"name": "svelte-library",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"format": "prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"package": "svelte-package && publint"
+	},
+	"type": "module",
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@sveltejs/package": "^2.3.1",
+		"@types/eslint": "^8.56.7",
+		"@typescript-eslint/eslint-plugin": "^7.5.0",
+		"@typescript-eslint/parser": "^7.5.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.35.1",
+		"prettier": "^3.2.5",
+		"prettier-plugin-svelte": "^3.2.2",
+		"publint": "^0.2.7",
+		"svelte": "^4.2.12",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.4"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"peerDependencies": {
+		"svelte": "^4.2.12"
+	}
+}
